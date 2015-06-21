@@ -1,0 +1,73 @@
+@import "constants";
+
+body {
+	background-color: white;
+	padding: 0;
+	margin: 0;
+	font-family: GosmickSans, Comic Sans, Comic Sans MS, Arial;
+}
+
+img {
+	max-width: 100%;
+}
+
+.pageHeader {
+	margin: 0;
+	padding: 20px 10px;
+	background-color: @brainsplosion-orange;
+	color: white;
+}
+
+@navigation-height: 60px;
+@navigation-bottom-padding: 10px;
+@navigation-icon-padding: 8px;
+
+.navigation {
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 100;
+	width: 100%;
+	height: @navigation-height;
+	background-color:  @brainsplosion-extraLightOrange;
+	border-bottom: double @navigation-bottom-padding @brainsplosion-darkOrange;
+
+	a.brainsplosion-icon {
+		display: inline-block;
+		background: url('/images/logo/brainsplosion_games_icon_small.gif');
+		background-size: 100%;
+		width: @navigation-height - 2 * @navigation-icon-padding;
+		height: @navigation-height - 2 * @navigation-icon-padding;
+		margin: @navigation-icon-padding;
+		border-radius: 1px;
+	}
+
+	.button {
+		float: right;
+		display: inline-block;
+		height: @navigation-height;
+		box-sizing: border-box;
+		padding: 20px;
+		border-left: 1px dashed @brainsplosion-darkOrange;
+		color: @brainsplosion-lightBrown;
+		text-decoration: none;
+
+		&.primary {
+			background-color: @brainsplosion-lightOrange;
+		}
+	}
+}
+
+header {
+	text-align: center;
+	margin-top: @navigation-height + @navigation-bottom-padding;
+	padding: 20px;
+	border-bottom: 5px double @brainsplosion-orange;
+}
+
+footer {
+	border-top: 1px solid @brainsplosion-orange;
+	text-align: center;
+	color: @brainsplosion-grey;
+	font-size: 0.6em;
+}

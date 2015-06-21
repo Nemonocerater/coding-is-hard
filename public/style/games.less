@@ -1,0 +1,56 @@
+.game {
+	padding: 10px 10px 20px 10px;
+
+	>div {
+		max-width: 800px;
+		margin: auto;
+	}
+
+	&:nth-child(odd) {
+		color: white;
+		background-color: @brainsplosion-orange;
+		border-bottom: 5px double white;
+	}
+	&:nth-child(even) {
+		color: @brainsplosion-orange;
+		background-color: white;
+		border-bottom: 5px double @brainsplosion-orange;
+	}
+	&:last-child {
+		border-bottom: none;
+	}
+
+	img {
+		border: 1px solid @brainsplosion-grey;
+	}
+
+	.links {
+		text-align: center;
+
+		a, a:hover, a:visited {
+			display: inline-block;
+			background-color: @brainsplosion-lightBrown;
+			color: white;
+			cursor: pointer;
+			padding: 7px 25px;
+
+			&:active {
+				background-color: @brainsplosion-brown;
+				color: @brainsplosion-grey;
+			}
+
+			&:first-child {
+				margin-left: 10px;
+				border-top-left-radius: 5px;
+				border-bottom-left-radius: 5px;
+			}
+
+			&:last-child {
+				border-left: 2px solid rgba(0,0,0, 0.1);;
+				border-top-right-radius: 5px;
+				border-bottom-right-radius: 5px;
+			}
+		}
+	}
+}
+
